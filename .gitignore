@@ -1,0 +1,14 @@
+# 版权材料（绝不上传）
+01.Book/
+02.MD/
+
+# 本地运营数据（项目材料、流水线日志，repo 提供模板不提供数据）
+04.Projects/
+05.Pipeline/
+
+# 工具与系统
+__pycache__/
+*.pyc
+.env
+.obsidian/
+*.log
