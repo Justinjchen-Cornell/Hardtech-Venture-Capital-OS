@@ -32,37 +32,22 @@
 **Interfaces:**
 - Produces: repo 根骨架；后续所有任务的文件均落在此结构下
 
-- [ ] **Step 1: 创建 .gitignore**（排除版权与本地数据）
-```gitignore
-# 版权材料（绝不上传）
-01.Book/
-02.MD/
-
-# 本地运营数据（项目材料、流水线日志）
-04.Projects/
-05.Pipeline/
-
-# 工具与系统
-__pycache__/
-*.pyc
-.env
-.obsidian/
-*.log
-```
-- [ ] **Step 2: 创建 LICENSE**（MIT，作者 Justinjchen-Cornell）
-- [ ] **Step 3: 创建 README.md v0.1**（11 节结构：标题定位/徽章占位/为什么/架构图/目录结构/快速开始/11 本书分层表/成都 4+6 候选地图/项目管线状态机/版权声明/License）
-- [ ] **Step 4: 创建空目录并放置 README 说明**
-- [ ] **Step 5: 验证**：`git check-ignore 01.Book` 应输出该路径
+- [x] **Step 1: 创建 .gitignore**（排除版权与本地数据）✅ 已验证
+- [x] **Step 2: 创建 LICENSE**（MIT）✅
+- [x] **Step 3: 创建 README.md v0.1** ✅
+- [x] **Step 4: 创建空目录并放置 README 说明** ✅
+- [x] **Step 5: 验证** ✅（git check-ignore 全部匹配）
 
 ### Task 2: git init + GitHub 连接 + 首次 push 骨架
 
 **Files:** 无新增（git 元数据）
 
-- [ ] **Step 1: git init**（`git init -b main`）
-- [ ] **Step 2: 检查认证**：`gh auth status` 或 `git config user.name`；无认证则给出用户 push 指引
-- [ ] **Step 3: add + commit**（`feat: init repo skeleton`）
-- [ ] **Step 4: remote add + push**（remote: https://github.com/Justinjchen-Cornell/Hardtech-Venture-Capital-OS.git）
-- [ ] **Step 5: 验证**：GitHub 网页可见 README/.gitignore/LICENSE
+- [x] **Step 1: git init** ✅（`git init -b main`）
+- [x] **Step 2: 检查认证** ✅（gh 未登录，但 git push 凭据可用——push 成功）
+- [x] **Step 3: add + commit** ✅（commit 5c57bcd）
+- [x] **Step 4: remote add + push** ✅（`[new branch] main -> main`）
+- [x] **Step 5: 验证** ✅（HTTP 200，README/LICENSE/docs/templates 可见）
+- [ ] 待办：repo description/topics（需 gh auth login 后由 Claude 填，或网页手动填）
 
 ### Task 3: 精读单元 1（多元思维模型——箴言版 vs 演讲版）
 
@@ -75,9 +60,9 @@ __pycache__/
 - Consumes: 穷查理宝典 MD 第四章即席谈话 + 附录第一讲（行 682-1349、2770-3315）
 - Produces: 概念页 x3、沉淀卡 x1、进度表首行
 
-- [ ] **Step 1: 贴原文关键段落**（锤子与钉子 / 重要学科重要理论 / 思维格栅），附硬科技 VC 语境解读
-- [ ] **Step 2: 校验对话**——提问（用户以真实项目经验回应，郑宗良项目可作试刀石）
-- [ ] **Step 3: 提炼概念**——建 3 个双链概念页（按脑归档规则）
+- [x] **Step 1: 贴原文关键段落**（锤子与钉子 / 重要学科重要理论 / 思维格栅）✅ 已提供（行 814-826 箴言版 + 行 2770-2844 演讲版）
+- [ ] **Step 2: 带教示范**——用郑宗良天线项目演示 6 模型叠放（技术/市场/竞争/团队/政策/财务）
+- [ ] **Step 3: 提炼概念**——建 3 个双链概念页（多元思维模型 / Lollapalooza效应 / 思维格栅）
 - [ ] **Step 4: 沉淀**——写深度沉淀卡 + 更新 reading-进度.md
 - [ ] **Step 5: 用户确认进入单元 2**（不确认不前进）
 
