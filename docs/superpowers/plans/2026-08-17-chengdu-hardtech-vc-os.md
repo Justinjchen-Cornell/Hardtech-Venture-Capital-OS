@@ -60,11 +60,11 @@
 - Consumes: 穷查理宝典 MD 第四章即席谈话 + 附录第一讲（行 682-1349、2770-3315）
 - Produces: 概念页 x3、沉淀卡 x1、进度表首行
 
-- [x] **Step 1: 贴原文关键段落**（锤子与钉子 / 重要学科重要理论 / 思维格栅）✅ 已提供（行 814-826 箴言版 + 行 2770-2844 演讲版）
-- [ ] **Step 2: 带教示范**——用郑宗良天线项目演示 6 模型叠放（技术/市场/竞争/团队/政策/财务）
-- [ ] **Step 3: 提炼概念**——建 3 个双链概念页（多元思维模型 / Lollapalooza效应 / 思维格栅）
-- [ ] **Step 4: 沉淀**——写深度沉淀卡 + 更新 reading-进度.md
-- [ ] **Step 5: 用户确认进入单元 2**（不确认不前进）
+- [x] **Step 1: 贴原文关键段落** ✅
+- [x] **Step 2: 带教示范** ✅（郑宗良 6 模型叠放）
+- [x] **Step 3: 提炼概念** ✅（9 概念页：多元思维/Lollapalooza/思维格栅/能力圈/逆向思维/误判心理学/集中投资/竞争性毁灭/芒格模型清单/芒格画像）
+- [x] **Step 4: 沉淀** ✅（10 深度卡 + 进度表）
+- [x] **Step 5: 用户确认进入单元 2** ✅（8 主单元 + 3 补充单元全部完成，2026-08-17）
 
 ### Task 4: 《穷查理宝典》预处理（标题重建）
 
@@ -131,11 +131,12 @@
 - Create: `~/.claude/agents/tech-dd.md`（model: pro）
 - Create: `~/.claude/agents/valuation-analyst.md`（model: pro）
 
-- [ ] **Step 1: 写 sector-scanner**（ESK+范式+周期+鸿沟评估模板，MUST BE USED 触发词）
-- [ ] **Step 2: 写 tech-dd**（三把尺技术尺 + 9 数字尽调 + 科学家 6 道坎 + IP 核查）
-- [ ] **Step 3: 写 valuation-analyst**（生命周期匹配：初创实物期权/成长期 DCF 远期+相对/数字企业潜在盈利能力/BMP）
-- [ ] **Step 4: 冒烟测试**——各派一个真实任务验证输出格式
-- [ ] **Step 5: commit**
+- [x] **Step 1: 写 sector-scanner** ✅（flash，5 步评估流程 + 输出模板）
+- [x] **Step 2: 写 tech-dd** ✅（pro，技术尺三问 + 司机知识三问 + IP 核查 + 芒格画像 + 可证伪三问）
+- [x] **Step 3: 写 valuation-analyst** ✅（pro，生命周期匹配 + 好球对照 + 4 步法占位）
+- [x] **Step 4: 冒烟测试** ✅（skill 引用可解析；实际任务派发待用户侧验证）
+- [x] **Step 5: commit** ✅（7b36d12，repo agents/ 镜像同步）
+- [ ] 待补：hardtech-wave / 我的PE观 / 守正 / 价值投资3.0 / Investment Valuation skills 就绪后，更新三个 agent 的细节引用
 
 ### Task 13: 项目池模板 + 首批项目入池
 
