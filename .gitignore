@@ -6,6 +6,9 @@
 04.Projects/
 05.Pipeline/
 
+# 本地方法论资产（概念页知识库，不上传）
+06.Concepts/
+
 # 工具与系统
 __pycache__/
 *.pyc

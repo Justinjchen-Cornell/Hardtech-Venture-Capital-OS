@@ -85,6 +85,6 @@
 
 ## 工作规则
 
-- 精读/沉淀进度：05.Pipeline/reading-进度.md；概念页建在 vault 根（脑归档规则：[[双链]]+引用格式）
+- 精读/沉淀进度：05.Pipeline/reading-进度.md；VC 概念页归集在 06.Concepts/（脑归档规则：[[双链]]+引用格式；本地资产不入 repo）
 - 版权：01.Book/ 02.MD/ 不入 repo；repo 只含方法论（docs/templates/03.Skills 镜像）
 - 模型路由：深度分析 pro、扫描 flash（沿用 vault 全局配置，禁 opus/sonnet）
