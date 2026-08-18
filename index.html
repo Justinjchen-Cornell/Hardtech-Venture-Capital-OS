@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hardtech VC 初筛台 · 项目基本评判</title>
+<style>
+:root{--bg:#0f1420;--card:#1a2233;--card2:#212c42;--line:#2e3a52;--txt:#e8edf5;--sub:#93a1b8;
+--green:#2ecc71;--yellow:#f1c40f;--red:#e74c3c;--blue:#4a9eff;--accent:#7c5cff}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--txt);font-family:"PingFang SC","Microsoft YaHei",sans-serif;min-height:100vh}
+header{padding:28px 24px;border-bottom:1px solid var(--line);background:linear-gradient(135deg,#141b2b,#1a2233)}
+header h1{font-size:22px;letter-spacing:1px}
+header p{color:var(--sub);font-size:13px;margin-top:6px}
+main{max-width:1080px;margin:0 auto;padding:24px}
+.section-title{font-size:15px;color:var(--accent);margin:22px 0 12px;font-weight:600;display:flex;align-items:center;gap:8px}
+.section-title::after{content:"";flex:1;height:1px;background:var(--line)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.field{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.field label{display:block;font-size:12px;color:var(--sub);margin-bottom:6px}
+.field input,.field select{width:100%;background:var(--card2);border:1px solid var(--line);color:var(--txt);
+border-radius:6px;padding:8px 10px;font-size:14px;outline:none}
+.field input:focus,.field select:focus{border-color:var(--blue)}
+.hint{font-size:11px;color:var(--sub);margin-top:4px}
+.btn{background:linear-gradient(135deg,var(--accent),var(--blue));color:#fff;border:none;border-radius:10px;
+padding:14px 40px;font-size:16px;cursor:pointer;margin:26px auto;display:block;font-weight:600;letter-spacing:2px}
+.btn:hover{opacity:.9}
+#output{display:none;margin-top:20px}
+.verdict{border-radius:12px;padding:20px 24px;margin-bottom:16px;border:1px solid var(--line)}
+.verdict.pass{background:rgba(46,204,113,.08);border-color:var(--green)}
+.verdict.cond{background:rgba(241,196,15,.08);border-color:var(--yellow)}
+.verdict.fail{background:rgba(231,76,60,.08);border-color:var(--red)}
+.verdict h2{font-size:20px;margin-bottom:8px}
+.verdict p{color:var(--sub);font-size:13px;line-height:1.7}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:16px}
+.mcard{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px}
+.mcard h3{font-size:13px;color:var(--sub);margin-bottom:8px;font-weight:500}
+.mcard .score{font-size:28px;font-weight:700}
+.mcard .note{font-size:12px;color:var(--sub);margin-top:6px;line-height:1.6}
+.risks{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px;margin-top:16px}
+.risks h3{font-size:14px;margin-bottom:10px;color:var(--yellow)}
+.risks ul{padding-left:18px}
+.risks li{font-size:13px;color:var(--txt);margin-bottom:6px;line-height:1.6}
+.next{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px;margin-top:16px}
+.next h3{font-size:14px;margin-bottom:10px;color:var(--blue)}
+.next ol{padding-left:18px}
+.next li{font-size:13px;margin-bottom:6px;line-height:1.6;color:var(--txt)}
+.footer{color:var(--sub);font-size:11px;text-align:center;padding:20px;border-top:1px solid var(--line);margin-top:30px}
+</style>
+</head>
+<body>
+<header>
+  <h1>🎯 Hardtech VC 初筛台</h1>
+  <p>丢进项目资料 → 60 秒基本评判（穷查理 · 守正 · 硬科技浪潮 · MatMax · 迹象法 五框架合流）</p>
+</header>
+<main>
+  <div class="section-title">① 基本信息</div>
+  <div class="grid">
+    <div class="field"><label>项目名称</label><input id="p_name" placeholder="如：郑宗良天线"></div>
+    <div class="field"><label>赛道方向（4+6 候选）</label><select id="p_sector">
+      <option value="航空航天/商业航天">航空航天/商业航天</option><option value="低空经济">低空经济</option>
+      <option value="新能源">新能源</option><option value="新材料">新材料</option>
+      <option value="具身智能">具身智能</option><option value="生物制造">生物制造</option>
+      <option value="量子科技">量子科技</option><option value="6G">第六代移动通信</option>
+      <option value="其他/未归类">其他/未归类</option></select></div>
+    <div class="field"><label>阶段</label><select id="p_stage">
+      <option value="0">实验室/概念</option><option value="1">天使/种子</option><option value="2">A 轮</option>
+      <option value="3">成长期</option></select></div>
+    <div class="field"><label>元事实证据等级（支撑结论的关键事实）</label><select id="p_ev">
+      <option value="0">L0 无/未验证</option><option value="1">L1 仅口头</option><option value="2">L2 书面</option>
+      <option value="3">L3 合同/协议</option><option value="4">L4 资金到账</option></select>
+      <div class="hint">订单/专利/职务发明/全职承诺等关键事实的证据强度</div></div>
+  </div>
+
+  <div class="section-title">② 技术与团队</div>
+  <div class="grid">
+    <div class="field"><label>技术领先性</label><select id="t_lead">
+      <option value="0">无法判断</option><option value="1">跟随者/已被超越</option>
+      <option value="2">领先 1 年以内</option><option value="3">领先 1-2 年</option><option value="4">领先 2 年以上或太超前</option></select></div>
+    <div class="field"><label>可复制性（壁垒层级）</label><select id="t_moat">
+      <option value="0">无法判断</option><option value="1">易复制（信息层/通用工艺）</option>
+      <option value="2">存疑（待验证）</option><option value="3">难复制（材料工艺/平台型）</option></select></div>
+    <div class="field"><label>创始人全职？</label><select id="tm_full">
+      <option value="0">未知</option><option value="1">否（兼职）</option><option value="2">是（全职）</option></select></div>
+    <div class="field"><label>商业角色（市场/销售负责人）</label><select id="tm_biz">
+      <option value="0">未知</option><option value="1">缺失（教授单打/次元壁）</option>
+      <option value="2">有，但不全职</option><option value="3">有且全职</option></select></div>
+    <div class="field"><label>行业老兵（10 年+研发/产业履历）</label><select id="tm_vet">
+      <option value="0">未知</option><option value="1">无（硬伤风险）</option><option value="2">有</option></select></div>
+  </div>
+
+  <div class="section-title">③ 市场与订单</div>
+  <div class="grid">
+    <div class="field"><label>市场天花板（细分 TAM）</label><select id="m_tam">
+      <option value="0">无法判断/未测算</option><option value="1">小于 50 亿（小老头风险）</option>
+      <option value="2">50-100 亿（临界）</option><option value="3">大于 100 亿（主流市场）</option></select></div>
+    <div class="field"><label>客户结构</label><select id="m_cust">
+      <option value="0">未验证</option><option value="1">单一大客户依赖</option>
+      <option value="2">少数客户（3-5）</option><option value="3">客户多元</option></select></div>
+    <div class="field"><label>订单状态（三序/三连）</label><select id="m_order">
+      <option value="0">无/口头意向</option><option value="1">书面询价/框架</option>
+      <option value="2">已签合同</option><option value="3">预付款/首批交付</option></select></div>
+    <div class="field"><label>收入状态</label><select id="m_rev">
+      <option value="0">无收入</option><option value="1">有收入雏形（小于1000万）</option>
+      <option value="2">收入增长中（20%+）</option></select></div>
+  </div>
+
+  <button class="btn" onclick="assess()">⚡ 生成基本评判</button>
+
+  <div id="output">
+    <div id="verdict" class="verdict"></div>
+    <div class="cards" id="cards"></div>
+    <div class="risks" id="risks"></div>
+    <div class="next" id="next"></div>
+  </div>
+  <div class="footer">Hardtech-Venture-Capital-OS · 初筛台 v1.0 · 本页为 60 秒初筛，不替代深度尽调（管线协议 7 步）</div>
+</main>
+
+<script>
+function score(name, val, max, note){return {name:name,val:val,max:max,note:note}}
+function assess(){
+  function g(id){return document.getElementById(id).value;}
+  var n=g('p_name')||'未命名项目';
+  var ev=+g('p_ev'), lead=+g('t_lead'), moat=+g('t_moat'), full=+g('tm_full'),
+      biz=+g('tm_biz'), vet=+g('tm_vet'), tam=+g('m_tam'), cust=+g('m_cust'),
+      order=+g('m_order'), rev=+g('m_rev'), stage=+g('p_stage');
+
+  // ===== 死亡清单（六条自动判定）=====
+  var dl=[];
+  if(rev===0 && order<=0) dl.push({k:'1 现金流断裂',s:'红',t:'无收入+无订单 -> 跑道未知，死亡谷高危'});
+  else if(rev===0&&order===1) dl.push({k:'1 现金流断裂',s:'黄',t:'无收入，订单仅书面——泵2未点火'});
+  else dl.push({k:'1 现金流断裂',s:'绿',t:'有收入/订单支撑'});
+  dl.push({k:'2 团队内讧',s:(vet===0?'黄':'绿'),t:(vet===0?'股权/团队结构未验证':'团队有老兵背书')});
+  dl.push({k:'3 合规事故',s:(ev<2?'黄':'绿'),t:(ev<2?'职务发明/权属未核查（高校项目尤其）':'权属有书面依据')});
+  dl.push({k:'4 技术被颠覆',s:(moat===1?'红':(moat===2?'黄':'绿')),t:(moat===1?'壁垒易复制——大厂可碾压':(moat===2?'可复制性存疑，待验证':'壁垒较深'))});
+  dl.push({k:'5 伪需求',s:(order<=0?'黄':'绿'),t:(order<=0?'无客户信号——三序未开始':'有订单/客户信号')});
+  dl.push({k:'6 道德风险',s:(full===1?'黄':'绿'),t:(full===1?'创始人非全职=投入度风险':'全职状态待确认')});
+  var redCount=0, yellowCount=0;
+  dl.forEach(function(x){if(x.s==='红')redCount++;if(x.s==='黄')yellowCount++;});
+
+  // ===== 三把尺（1-5）=====
+  var team = Math.min(5, 1 + (full===2?1.5:0) + (biz===3?1.5:(biz===2?0.8:0)) + (vet===2?1:0));
+  var market = Math.min(5, 1 + (tam===3?1.5:(tam===2?0.8:0)) + (cust===3?1.2:(cust===2?0.6:0)) + (rev>=1?1:0));
+  var tech = Math.min(5, 1 + (lead===3?1.5:(lead===4?1:(lead===2?0.8:0))) + (moat===3?1.5:(moat===2?0.5:0)));
+
+  // ===== ESK（1-5）=====
+  var K = Math.min(5, 1 + (lead>=3?1.5:0) + (moat>=2?1:0) + (ev>=2?0.8:0));
+  var E = Math.min(5, 1 + (rev>=2?1.5:(rev===1?0.8:0)) + (tam===3?1:0) + (order>=2?1:0));
+  var S = (g('p_sector').indexOf('航空')>=0||g('p_sector').indexOf('低空')>=0)?4:3;
+
+  // ===== MatMax 初标 =====
+  var crl = order===0?1:(order===1?3:(order===2?6:7));
+  var trl = stage===0?4:(stage===1?5:(stage===2?6:8));
+  var misalign = (trl>5 && crl<3) ? '技术过剩·商业化不足' : ((trl<4&&crl>4)?'市场ready·技术不成熟':'两轴同步');
+
+  // ===== 失败概率初估 =====
+  var pf = 40 + redCount*12 + yellowCount*5 + (ev<=1?10:0) + (biz<=1?8:0) + (order<=0?8:0);
+  pf = Math.max(20, Math.min(90, pf));
+
+  // ===== 三选项 =====
+  var option='可以', oReason='认知可及';
+  if(redCount>=2){option='不行';oReason='2条以上致死项'}
+  else if(redCount>=1||(ev<=1&&order<=0)){option='条件可以';oReason='有致死/元事实风险，需先验证'}
+  else if(tech<2&&market<2&&team<2){option='太难';oReason='三把尺全低，超出能力圈'}
+
+  // ===== 决策门 1-2 =====
+  var gate1 = ev>=3?'通过':'未过（元事实<L3）';
+  var gate2 = redCount===0?'通过':('未过（'+redCount+' 条致死）');
+
+  // ===== 综合判定 =====
+  var verdict, cls, vReason;
+  if(option==='不行'||option==='太难'||redCount>=2){verdict='不建议推进';cls='fail';
+    vReason='三选项='+option+'（'+oReason+'）；死亡清单 '+redCount+' 红；决策门2 '+gate2}
+  else if(redCount===1||ev<=1){verdict='条件进入深调';cls='cond';
+    vReason='三选项='+option+'；决策门1 '+gate1+'；先完成元事实验证（证据等级→L3）再立项'}
+  else if(team>=3&&market>=3&&tech>=3){verdict='基本可推进';cls='pass';
+    vReason='三把尺全过（团队'+team.toFixed(1)+'/市场'+market.toFixed(1)+'/技术'+tech.toFixed(1)+'）；决策门1-2 通过'}
+  else{verdict='观察等待';cls='cond';
+    vReason='三把尺未全过（团队'+team.toFixed(1)+'/市场'+market.toFixed(1)+'/技术'+tech.toFixed(1)+'）；等待薄弱维度补强'}
+
+  // ===== 渲染 =====
+  document.getElementById('output').style.display='block';
+  document.getElementById('verdict').className='verdict '+cls;
+  document.getElementById('verdict').innerHTML=
+    '<h2>'+verdict+'</h2><p><b>'+n+'</b> · '+g('p_sector')+' · 三选项：'+option+'（'+oReason+'）</p><p>'+vReason+'</p>';
+  var cards=[
+    score('三把尺·团队',team,5,'全职'+(full===2?'是':(full===1?'否':'?'))+' · 商业角色'+(biz===3?'是':(biz<=1?'缺失':'兼职'))+' · 老兵'+(vet===2?'有':'?')),
+    score('三把尺·市场',market,5,'TAM'+(tam===3?'过百亿':(tam===0?'未测':'临界'))+' · 客户'+(cust===3?'多元':(cust<=1?'集中':'少数'))+' · 收入'+(rev===0?'无':(rev===1?'雏形':'增长'))),
+    score('三把尺·技术',tech,5,'领先'+(lead===3?'1-2年':(lead===0?'未知':'其他'))+' · 壁垒'+(moat===3?'难复制':(moat===1?'易复制':'存疑'))),
+    score('ESK',((K+E+S)/3).toFixed(1),5,'K'+K.toFixed(1)+'/E'+E.toFixed(1)+'/S'+S+'（知识/经济/社会）'),
+    score('MatMax CRL',crl,9,'TRL'+trl+' × CRL'+crl+' · '+misalign),
+    score('成功概率',(100-pf),100,'初估失败率 '+pf+'%（元事实 L'+['0','1','2','3','4'][ev]+'）')
+  ];
+  document.getElementById('cards').innerHTML=cards.map(function(c){
+    var col = c.val>=4?'var(--green)':(c.val>=2.5?'var(--yellow)':'var(--red)');
+    return '<div class="mcard"><h3>'+c.name+'</h3><div class="score" style="color:'+col+'">'+c.val+'<span style="font-size:13px;color:var(--sub)">/'+c.max+'</span></div><div class="note">'+c.note+'</div></div>';
+  }).join('');
+
+  var reds = dl.filter(function(x){return x.s!=='绿';});
+  var riskHtml = '<h3>死亡清单快扫（'+redCount+' 红 / '+yellowCount+' 黄）</h3><ul>';
+  if(reds.length===0){riskHtml += '<li>六条全绿（当前无致死信号）</li>';}
+  else{
+    reds.forEach(function(x){
+      var col = x.s==='红'?'var(--red)':'var(--yellow)';
+      riskHtml += '<li><b style="color:'+col+'">'+x.k+'</b>：'+x.t+'</li>';
+    });
+  }
+  riskHtml += '</ul>';
+  document.getElementById('risks').innerHTML=riskHtml;
+
+  var steps=[];
+  if(ev<=1) steps.push('【最高优先】元事实验证：索取关键事实的书面文件（订单/专利/职务发明）——证据等级 L1→L3');
+  if(order<=0) steps.push('订单三连核查：意向→合同→预付款，谁在哪个阶段');
+  if(biz<=1) steps.push('团队商业角色：谁负责市场/销售？全职？→ 次元壁解法（商业合伙人/CEO）');
+  if(tam===0) steps.push('市场测算：细分 TAM（价×量）——百亿门槛校验');
+  if(moat===2) steps.push('壁垒验证：专利核心性 + 材料工艺 know-how 归属（范式层级）');
+  if(steps.length===0) steps.push('进入管线协议步骤 3-6：深度尽调 → 估值 → 转化 → 交易结构');
+  document.getElementById('next').innerHTML=
+    '<h3>下一步动作（按优先级）</h3><ol>'+steps.map(function(s){return '<li>'+s+'</li>';}).join('')+'</ol>';
+}
+</script>
+</body>
+</html>
