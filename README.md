@@ -15,6 +15,23 @@
 
 ---
 
+
+## 🔗 Knowledge Chain — 11 Books → Handbook → Agents
+
+```mermaid
+graph TD
+    A["Poor Charlie (Way) · Mental Models"] --> B["Shou Zheng (Skill) · Three Rulers"]
+    B --> C["Hardtech Wave (Scale) · ESK / 5 Paradigms"]
+    C --> D["Tech Transfer (Conversion) · TRL-CRL"]
+    D --> E["Venture Deals (Terms) · E/C Clauses"]
+    E --> F["Value Investing 3.0 + IV (Valuation) · BMP / DCF"]
+    F --> G["Growth Tech Stocks (Fundamentals) · 20% Rule"]
+    G --> H["My PE Views (Local Practice) · 9 Numbers"]
+    H --> I["The Next Windfall (Cycles) · Timing & Foam"]
+    I --> J["PE & DD Handbook (Workbook)<br/>13 Research Elements + Sign-Based Investing"]
+    J --> K["Agents<br/>sector-scanner template + tech-dd sign check"]
+```
+
 ## 🚀 Live Demo — 60-Second Screening Dashboard
 
 **Drop in project facts → get a structured first-pass verdict** — five frameworks fused into one client-side engine (no backend, runs entirely in your browser):
