@@ -25,28 +25,39 @@ The dashboard encodes the system's core screening logic: three-option classifica
 
 ---
 
-## 🏗️ Architecture — Knowledge in Three Layers + One Deal Pipeline
+## 🏗️ Architecture
 
-```
-┌──────────────────────────────────────────────────────────────────┐
-│ Layer 1 · CLAUDE.md    Investment philosophy + iron rules        │
-│                        (constitution, 8 rules, always resident)  │
-├──────────────────────────────────────────────────────────────────┤
-│ Layer 2 · 11 Skills    On-demand book knowledge                  │
-│  poor-charlie-almanack (道) · shou-zheng (术) · hardtech-wave    │
-│  (ESK) · tech-transfer (conversion) · venture-deals (terms) ·    │
-│  value-investing-3 (BMP) · growth-tech-stocks (20% rule) ·       │
-│  my-pe-view (local PE) · damodaran-valuation (VC chapters) ·     │
-│  next-windfall (cycles) · pe-dd-handbook (workbook)              │
-├──────────────────────────────────────────────────────────────────┤
-│ Layer 3 · 5 Subagents   Specialist workers (independent context) │
-│  sector-scanner · tech-dd · valuation-analyst ·                 │
-│  tech-transfer-advisor · deal-negotiator                        │
-├──────────────────────────────────────────────────────────────────┤
-│ Layer 4 · Pipeline      Executable 7-step deal protocol          │
-│  screen → filter → deep-DD → valuation → conversion → terms → IC│
-│  + decision gates + meta-fact checklist + state machine         │
-└──────────────────────────────────────────────────────────────────┘
+```mermaid
+graph TB
+    subgraph L1["Layer 1 · CLAUDE.md — Decision Rules"]
+        R1["Constitution · 8 Iron Rules"]
+        R2["Framework Arbitration · 11 Rules"]
+        R3["Pipeline Protocol · Decision Gates"]
+    end
+
+    subgraph L2["Layer 2 · 11 Skills — On-Demand Book Knowledge"]
+        S1["Poor Charlie · Shou Zheng · Hardtech Wave"]
+        S2["Tech Transfer · Venture Deals · Value 3.0"]
+        S3["Growth Stocks · My PE · Damodaran · Windfall · DD Handbook"]
+    end
+
+    subgraph L3["Layer 3 · 5 Subagents — Specialist Workers"]
+        A1["sector-scanner"] --> A2["tech-dd"]
+        A2 --> A3["valuation-analyst"]
+        A3 --> A4["tech-transfer-advisor"]
+        A4 --> A5["deal-negotiator"]
+    end
+
+    subgraph L4["Layer 4 · Pipeline — 7-Step Executable Protocol"]
+        P1["1 · Screen"] --> P2["2 · Filter"]
+        P2 --> P3["3 · Deep DD"]
+        P3 --> P4["4 · Valuation"]
+        P4 --> P5["5 · Conversion"]
+        P5 --> P6["6 · Terms"]
+        P6 --> P7["7 · IC Memo"]
+    end
+
+    L1 --> L2 --> L3 --> L4
 ```
 
 ## ✨ Highlights
@@ -97,14 +108,13 @@ cp agents/*.md ~/.claude/agents/
 ## 📁 Directory
 
 ```
-CLAUDE.md / 框架仲裁规则.md / 管线执行协议-v1.1.md / 知识回写协议.md / 使用场景矩阵与信息收集.md
-03.Skills/    11 skill mirrors (methodology only, no copyrighted book text)
-06.Concepts/  42 linked concept pages (Chinese knowledge base)
-agents/       5 subagents
+CLAUDE.md · 框架仲裁规则.md · 管线执行协议-v1.2.md · 知识回写协议.md · 使用场景矩阵与信息收集.md
+03.Skills/    11 skill mirrors (methodology only)
+06.Concepts/  42 linked concept pages
+agents/       5 subagents · scripts/   deal sourcing + book pipeline
+templates/    project card + 8 pipeline templates
+examples/     end-to-end demo (Zheng project) · index.html  screening dashboard
 docs/         design docs · constitution · book map
-templates/    project card · pipeline output templates
-assets/       logo
-index.html    screening dashboard (GitHub Pages)
 ```
 
 ## 🗺️ Roadmap
@@ -140,10 +150,38 @@ MIT © Justinjchen-Cornell
 
 ## 🏗️ 架构：知识三层 + 业务一条管线
 
-- **层 1 · CLAUDE.md**：投资宪法（8 铁律）+ 十层方法论框架（常驻每条会话）
-- **层 2 · 11 个 Skill**：道（穷查理）· 术（守正）· 尺度（硬科技浪潮）· 转化 · 条款 · 估值 · 长期基本面 · 本土实战 · 估值圣经 · 周期 · 工作手册
-- **层 3 · 5 个子代理**：赛道扫描（ESK+周期）· 技术尽调（守正+9 数字）· 估值（12 步方法库）· 转化顾问（TRL/CRL/MatMax）· 谈判设计
-- **层 4 · 管线**：7 步可执行协议（初筛→筛选→深调→估值→转化→条款→IC）+ 5 道决策门 + 元事实清单 + 状态机
+```mermaid
+graph TB
+    subgraph L1["层 1 · CLAUDE.md — 决策纪律"]
+        R1["宪法 · 8 条铁律"]
+        R2["框架仲裁 · 11 条规则"]
+        R3["管线协议 · 决策门"]
+    end
+
+    subgraph L2["层 2 · 11 个 Skill — 按需加载的书本知识"]
+        S1["道（穷查理）· 术（守正）· 尺度（硬科技浪潮）"]
+        S2["转化 · 条款 · 估值 3.0 · 长期基本面"]
+        S3["本土实战 · 估值圣经 · 周期 · 工作手册"]
+    end
+
+    subgraph L3["层 3 · 5 个子代理 — 专项专家"]
+        A1["赛道扫描"] --> A2["技术尽调"]
+        A2 --> A3["估值分析"]
+        A3 --> A4["转化顾问"]
+        A4 --> A5["谈判设计"]
+    end
+
+    subgraph L4["层 4 · 管线 — 7 步可执行协议"]
+        P1["① 赛道扫描"] --> P2["② 初步筛选"]
+        P2 --> P3["③ 深度尽调"]
+        P3 --> P4["④ 估值分析"]
+        P4 --> P5["⑤ 转化评估"]
+        P5 --> P6["⑥ 交易结构"]
+        P6 --> P7["⑦ IC 备忘录"]
+    end
+
+    L1 --> L2 --> L3 --> L4
+```
 
 ## ✨ 核心特性
 
