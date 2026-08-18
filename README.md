@@ -108,13 +108,15 @@ cp agents/*.md ~/.claude/agents/
 ## 📁 Directory
 
 ```
-CLAUDE.md · 框架仲裁规则.md · 管线执行协议-v1.2.md · 知识回写协议.md · 使用场景矩阵与信息收集.md
-03.Skills/    11 skill mirrors (methodology only)
-06.Concepts/  42 linked concept pages
-agents/       5 subagents · scripts/   deal sourcing + book pipeline
-templates/    project card + 8 pipeline templates
-examples/     end-to-end demo (Zheng project) · index.html  screening dashboard
-docs/         design docs · constitution · book map
+CLAUDE.md · index.html (screening dashboard) · README.md
+docs/rules/    framework arbitration · pipeline protocol v1.2 · RWP · scenario matrix
+03.Skills/     11 skill mirrors (methodology only)
+06.Concepts/   42 linked concept pages
+agents/        5 subagents
+scripts/       deal sourcing + book-to-skill pipeline
+templates/     project card + 8 pipeline output templates
+examples/      end-to-end demo (Zheng project)
+docs/          design docs · constitution · book map
 ```
 
 ## 🗺️ Roadmap
