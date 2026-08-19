@@ -76,6 +76,7 @@
 ## 日常使用（场景触发）
 
 - 10 个高频场景 → `docs/rules/使用场景矩阵与信息收集.md`；信息收集混合模式（定期批量 5 分钟/30 分钟 + 关键事件即时快评）
+- 斜杠命令（.claude/commands/）：`/screen` 收BP初筛 · `/meeting` 会前准备 · `/news` 事件快评 · `/source` 赛道扫描 · `/roadshow` 路演 · `/review` 投后回访 · `/negotiate` 谈判准备 · `/quarterly` 季度复盘 · `/lp` LP简报 · `/ingest` 信息入库
 - 每项目生成 4 类工具：工作计划/关键信息提醒/优先级排序/提醒规则
 
 ## 框架仲裁（对立统一）
@@ -90,3 +91,4 @@
 - 版权：01.Book/ 02.MD/ 不入 repo；repo 只含方法论（docs/templates/skills/concepts/agents）
 - 目录单一化（2026-08-19）：skills/ concepts/ 为唯一副本直接编辑（取消 03.Skills/ 06.Concepts/ 双目录镜像与 sync 脚本）；本地数据（04.Projects/ 05.Pipeline/）gitignore
 - 模型路由：深度分析 pro、扫描 flash（沿用 vault 全局配置，禁 opus/sonnet）
+- 提交前跑 `python scripts/check.py`（引用完整性：skills/agents/双链/命令/技能状态表——0 错误 0 警告才提交）
