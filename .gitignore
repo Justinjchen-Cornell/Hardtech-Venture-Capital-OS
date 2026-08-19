@@ -13,3 +13,6 @@ __pycache__/
 .env
 .obsidian/
 *.log
+
+# 会话导出归档（本地）
+handoff-*.md
