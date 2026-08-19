@@ -1,6 +1,6 @@
 # 🎯 Hardtech Venture Capital OS
 
-> A Claude Code-powered decision operating system for early-stage **hardtech VC** — built on an 11-book knowledge foundation, 5 specialist subagents, a 7-step executable deal pipeline, and a web-based 60-second screening dashboard. Origin: **China, China**.
+> A Claude Code-powered decision operating system for early-stage **hardtech VC** — built on an 19-skill knowledge base (11 books + 7 operational workflows), 9 specialist agents, a 7-step executable deal pipeline, 10 slash commands, and a web-based 60-second screening dashboard. Origin: **China, China**.
 
 <p align="center">
   <img src="assets/logo.svg" width="120" alt="HVOS logo"/>
@@ -8,9 +8,10 @@
 
 <p align="center">
   <a href="https://justinjchen-cornell.github.io/Hardtech-Venture-Capital-OS/"><img src="https://img.shields.io/badge/Live%20Dashboard-GitHub%20Pages-blueviolet?style=for-the-badge" alt="Dashboard"/></a>
-  <img src="https://img.shields.io/badge/Books-11%20Skills-success?style=for-the-badge" alt="11 books"/>
-  <img src="https://img.shields.io/badge/Agents-5-blue?style=for-the-badge" alt="5 agents"/>
-  <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="MIT"/>
+  <img src="https://img.shields.io/badge/Skills-19-success?style=for-the-badge" alt="19 skills"/>
+  <img src="https://img.shields.io/badge/Agents-9-blue?style=for-the-badge" alt="9 agents"/>
+  <img src="https://img.shields.io/badge/Commands-10-orange?style=for-the-badge" alt="10 commands"/>
+  <img src="https://img.shields.io/badge/License-Apache%202.0-green?style=for-the-badge" alt="Apache 2.0"/>
 </p>
 
 ---
@@ -68,17 +69,19 @@ graph TB
         R3["Pipeline Protocol · Decision Gates"]
     end
 
-    subgraph L2["Layer 2 · 11 Skills — On-Demand Book Knowledge"]
-        S1["Poor Charlie · Shou Zheng · Hardtech Wave"]
-        S2["Tech Transfer · Venture Deals · Value 3.0"]
-        S3["Growth Stocks · My PE · Damodaran · Windfall · DD Handbook"]
+    subgraph L2["Layer 2 · 19 Skills — On-Demand Knowledge"]
+        S1["12 book skills: Poor Charlie · Shou Zheng · Hardtech Wave ..."]
+        S2["7 operational: dd-checklist · deal-screening · audit-xls"]
+        S3["ic-memo · portfolio-monitoring · unit-economics · value-creation-plan"]
     end
 
-    subgraph L3["Layer 3 · 5 Subagents — Specialist Workers"]
+    subgraph L3["Layer 3 · 9 Agents — Specialist Workers"]
         A1["sector-scanner"] --> A2["tech-dd"]
         A2 --> A3["valuation-analyst"]
         A3 --> A4["tech-transfer-advisor"]
         A4 --> A5["deal-negotiator"]
+        A6["meeting-prep · deal-sourcing"] --> A7["ic-memo-writer"]
+        A7 --> A8["ic-memo-auditor"]
     end
 
     subgraph L4["Layer 4 · Pipeline — 7-Step Executable Protocol"]
@@ -95,12 +98,14 @@ graph TB
 
 ## ✨ Highlights
 
-- **11-book knowledge system** — from Munger's mental models to Damodaran's valuation, each distilled into an on-demand skill (verified by 3-question tests)
-- **5 specialist subagents** — sector scanning (ESK + cycles), technical DD (three rulers + 9 numbers), valuation (12-step method library), tech-transfer (TRL / CRL / MatMax), deal structuring
+- **19-skill knowledge base** — 12 book skills (Munger → Damodaran, 3-question verified) + 7 operational skills (DD checklists, memo writing, portfolio monitoring, Excel audit — workflow patterns informed by Anthropic's financial-services reference repo, adapted to China early-stage hardtech)
+- **9 specialist agents** — sector scanning (ESK + cycles), technical DD (three rulers + 9 numbers + RFI tracking), valuation (method library + returns calc), tech-transfer (TRL / CRL / MatMax), deal structuring, meeting prep, deal sourcing (dedupe + founder outreach), IC memo write & audit
+- **10 slash commands** — `/screen` BP 60s screen · `/meeting` founder prep · `/news` event flash · `/source` sector scan · `/roadshow` · `/review` portfolio · `/negotiate` terms · `/quarterly` audit · `/lp` report · `/ingest` info capture (scenario matrix → executable)
 - **Executable pipeline protocol** — every step defines input / process / output / handoff / exception branches (SOP, not prose)
 - **5 decision gates** — mandatory before any investment decision (meta-facts ≥ L3, death list clean, good-ball check, Will-B-P ≥ 60, counter-arguments)
 - **Framework arbitration rules** — 11 rules built on *dialectical unity of opposites* for resolving conflicts between frameworks
 - **Meta-fact checklist** — evidence levels L1–L4 for facts that drive valuation (a verbal claim is not a contract)
+- **Reference integrity checker** — `scripts/check.py` validates skills/agents/wiki-links/commands before commit (0 errors 0 warnings required)
 - **Knowledge write-back protocol (RWP)** — four write-back channels so the system gets smarter with every execution
 - **Scenario trigger matrix** — 10 daily scenes mapped to actions (BP 60s screen / founder 15-min prep / post-investment monitoring / quarterly audit)
 - **China 4+6 focus** — anchored to the city's strategic emerging & future industries, data-driven convergence (no preset sector bias)
@@ -111,11 +116,16 @@ graph TB
 # 1. Load the decision rules (project-level CLAUDE.md)
 cd 09.BiZZ/06.VC
 
-# 2. Install subagents
+# 2. Install agents (9) and slash commands (10)
 cp agents/*.md ~/.claude/agents/
+cp .claude/commands/*.md ~/.claude/commands/
 
-# 3. Use the system
+# 3. Verify integrity before committing (0 errors 0 warnings)
+python scripts/check.py
+
+# 4. Use the system
 #    "Run the 7-step pipeline on {project}" — follow 管线执行协议
+#    "/screen <BP>" — 60-second screening · "/source" — weekly sector scan
 #    "Open the screening dashboard" → index.html / GitHub Pages
 ```
 
@@ -142,26 +152,29 @@ cp agents/*.md ~/.claude/agents/
 
 ```
 CLAUDE.md · index.html (screening dashboard) · README.md
-docs/rules/    framework arbitration · pipeline protocol v1.2 · RWP · scenario matrix
-skills/     11 skill mirrors (methodology only)
-concepts/   42 linked concept pages
-agents/        5 subagents
-scripts/       deal sourcing + book-to-skill pipeline
-templates/     project card + 8 pipeline output templates
-examples/      end-to-end demo (Zheng project)
-docs/          design docs · constitution · book map
+.claude/commands/ 10 slash commands (scenario matrix → executable)
+docs/           rules/ (arbitration · RWP · scenario matrix) · 技能状态.md · data-source mapping · skill-creation guide
+skills/         19 skills (12 book + 7 operational) — single source of truth (git-tracked)
+concepts/       42 linked concept pages
+agents/         9 agents
+pipeline/       10 output templates + 5-stage lifecycle + weekly workflow
+scripts/        check.py (integrity gate) · book-to-skill · deal sourcing
+templates/      project card template
+docs/DEPLOY.md  deployment guide
 ```
 
 ## 🗺️ Roadmap
 
-- [x] 11-book knowledge system + 5 subagents
+- [x] 19-skill knowledge base (11 books + 7 operational) + 9 agents
 - [x] Executable pipeline protocol + decision gates
 - [x] Meta-fact evidence levels + framework arbitration (dialectical)
 - [x] Scenario trigger matrix + hybrid info collection
 - [x] Screening dashboard (GitHub Pages)
-- [ ] Portfolio / post-investment monitoring module
+- [x] Post-investment module (portfolio-monitoring + value-creation-plan)
+- [x] IC memo workflow (ic-memo skill + writer/auditor agents)
+- [x] Slash commands + reference integrity checker
 - [ ] China channel sourcing automation (enterprise-data mining)
-- [ ] IC meeting workflow
+- [ ] Real-world validation on 10+ pipeline samples (4+6 convergence)
 
 ## ⚠️ Limitations (honest disclosure)
 
