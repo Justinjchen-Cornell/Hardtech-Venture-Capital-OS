@@ -48,8 +48,8 @@ cd 09.BiZZ/06.VC   # 或你的项目目录——CLAUDE.md 自动生效
 # 方式 B：完整管线（按协议 5 阶段）
 #   在 Claude Code 中说：
 #   "对 {项目名} 按管线执行协议跑阶段 1（赛道评估+技术尽调+转化评估）"
-#   → 按 docs/rules/管线执行协议.md 的输入/输出/交接逐步骤执行
-#   → 每步产出用 templates/pipeline/0X-*.md 模板
+#   → 按 pipeline/管线执行协议.md 的输入/输出/交接逐步骤执行
+#   → 每步产出用 pipeline/templates/0X-*.md 模板
 ```
 
 ### 第 6 步：转新书（可选，10 分钟/本）
