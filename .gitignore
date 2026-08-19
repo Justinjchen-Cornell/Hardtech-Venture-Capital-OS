@@ -16,3 +16,6 @@ __pycache__/
 
 # 会话导出归档（本地）
 handoff-*.md
+
+# 项目示例（本地保留，不上传）
+examples/
