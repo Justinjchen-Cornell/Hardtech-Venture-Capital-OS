@@ -1,6 +1,6 @@
 # 🎯 Hardtech Venture Capital OS
 
-> A Claude Code-powered decision operating system for early-stage **hardtech VC** — built on an 11-book knowledge foundation, 5 specialist subagents, a 7-step executable deal pipeline, and a web-based 60-second screening dashboard. Origin: **Chengdu, China**.
+> A Claude Code-powered decision operating system for early-stage **hardtech VC** — built on an 11-book knowledge foundation, 5 specialist subagents, a 7-step executable deal pipeline, and a web-based 60-second screening dashboard. Origin: **China, China**.
 
 <p align="center">
   <img src="assets/logo.svg" width="120" alt="HVOS logo"/>
@@ -87,7 +87,7 @@ graph TB
 - **Meta-fact checklist** — evidence levels L1–L4 for facts that drive valuation (a verbal claim is not a contract)
 - **Knowledge write-back protocol (RWP)** — four write-back channels so the system gets smarter with every execution
 - **Scenario trigger matrix** — 10 daily scenes mapped to actions (BP 60s screen / founder 15-min prep / post-investment monitoring / quarterly audit)
-- **Chengdu 4+6 focus** — anchored to the city's strategic emerging & future industries, data-driven convergence (no preset sector bias)
+- **China 4+6 focus** — anchored to the city's strategic emerging & future industries, data-driven convergence (no preset sector bias)
 
 ## 🚦 Quick Start
 
@@ -116,7 +116,7 @@ cp agents/*.md ~/.claude/agents/
 | Terms | *Venture Deals* | E/C clauses · term sheet · negotiation |
 | Handbook | *PE & DD Handbook* | 13 research elements · sign-based investing |
 
-## 🏙️ Chengdu 4+6 Focus (candidate map, data-driven)
+## 🏙️ China 4+6 Focus (candidate map, data-driven)
 
 - **4 emerging**: new energy / new materials / low-altitude economy / aerospace
 - **6 future**: quantum · bio-manufacturing · brain-computer · hydrogen & fusion · embodied AI · 6G
@@ -144,7 +144,7 @@ docs/          design docs · constitution · book map
 - [x] Scenario trigger matrix + hybrid info collection
 - [x] Screening dashboard (GitHub Pages)
 - [ ] Portfolio / post-investment monitoring module
-- [ ] Chengdu channel sourcing automation (enterprise-data mining)
+- [ ] China channel sourcing automation (enterprise-data mining)
 - [ ] IC meeting workflow
 
 ## 📄 License

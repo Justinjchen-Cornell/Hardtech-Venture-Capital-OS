@@ -1,8 +1,8 @@
-# 成都硬科技投资决策操作系统（Hardtech VC OS）实施计划
+# 中国硬科技投资决策操作系统（Hardtech VC OS）实施计划
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** 建立成都早中期硬科技投资决策操作系统——知识三层（CLAUDE.md + 11 本书 Skills + 专项子代理）+ 业务一层（项目池/流水线），书**一本本慢慢提炼转化**（非批量机械化），《穷查理宝典》精读并行推进。
+**Goal:** 建立中国早中期硬科技投资决策操作系统——知识三层（CLAUDE.md + 11 本书 Skills + 专项子代理）+ 业务一层（项目池/流水线），书**一本本慢慢提炼转化**（非批量机械化），《穷查理宝典》精读并行推进。
 
 **Architecture:** 本地 vault `09.BiZZ/06.VC/` 为项目根；`~/.claude/skills/` 放书技能、`~/.claude/agents/` 放子代理；GitHub repo `Hardtech-Venture-Capital-OS`（public）同步方法论层（不含书全文）。
 
@@ -142,7 +142,7 @@
 
 **Files:**
 - Create: `04.Projects/_templates/项目卡片.md`
-- Create: `04.Projects/_sources/成都项目源渠道.md`（A/B/C 分级）
+- Create: `04.Projects/_sources/中国项目源渠道.md`（A/B/C 分级）
 - Create: ≥10 张项目卡片（覆盖 4+6 候选方向，含郑宗良天线）
 
 - [ ] **Step 1: 设计项目卡片模板**（赛道标签/来源/芒格三选项/守正三把尺初评/20%法则/跟进状态/双链）
