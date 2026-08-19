@@ -32,6 +32,22 @@ graph TD
     J --> K["Agents<br/>sector-scanner template + tech-dd sign check"]
 ```
 
+## ⚡ One-Minute Overview
+
+**What it is**: 11 investment classics distilled into a runnable decision toolkit — drop in project facts, get structured judgment from sector scan to post-investment.
+
+**Start in 3 steps**:
+1. 🖥️ [Open the Screening Dashboard](https://justinjchen-cornell.github.io/Hardtech-Venture-Capital-OS/) — fill 14 fields, get a 60-second verdict (zero install)
+2. 📖 Read the [Deployment Guide](docs/DEPLOY.md) — 30 minutes to run your first project locally
+3. 🔍 See the [Skill Status Table](docs/技能状态.md) — which books are converted and how trustworthy
+
+**Only 5 core concepts to remember** (details in docs/rules/):
+- **Three options**: every project goes to "yes / no / too hard"
+- **Death list**: first ask how it dies, then why it lives
+- **Meta-facts**: verbal claims ≠ written evidence (L1-L4)
+- **Decision gates**: 5 mandatory gates before investing
+- **Five stages**: sector/tech → team background-check → valuation/terms → decision/closing → post-investment
+
 ## 🚀 Live Demo — 60-Second Screening Dashboard
 
 **Drop in project facts → get a structured first-pass verdict** — five frameworks fused into one client-side engine (no backend, runs entirely in your browser):
@@ -147,11 +163,18 @@ docs/          design docs · constitution · book map
 - [ ] China channel sourcing automation (enterprise-data mining)
 - [ ] IC meeting workflow
 
+## ⚠️ Limitations (honest disclosure)
+
+- This is a **decision-support tool**, not an automated investment bot — final judgment is yours
+- It does not replace your intuition about founders (AI reads data; you read people)
+- Built and validated in China's hardtech context; other markets/sectors may not apply
+- **AI can be wrong** — review all outputs; critical facts require primary documents (meta-facts ≥ L3)
+
 ## 📄 License
 
 **Apache License 2.0** — commercial use, modification, and redistribution are permitted, provided that the copyright notice and NOTICE file are retained.
 
-© Justinjchen-Cornell · See [LICENSE](LICENSE) and [NOTICE](NOTICE).
+© Justinjchen-Cornell · See [LICENSE](LICENSE) and [NOTICE](NOTICE) — **the NOTICE file contains copyright attribution and trademark statements; forks and derivatives must retain it**.
 
 ---
 
