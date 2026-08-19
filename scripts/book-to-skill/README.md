@@ -9,7 +9,7 @@
 3. **精读**（带教模式：原文→解读→体系握手→练习→沉淀）
 4. **组装 skill**：SKILL.md + chapters/ + patterns + glossary + cheatsheet
 5. **3 问验证**（已知答案——防乱编）
-6. **镜像**：方法论层（4 文件）同步 03.Skills/ → repo
+6. **镜像**：方法论层（4 文件）同步 skills/ → repo
 7. **沉淀 + RWP 回写**（概念页/执行日志/仲裁规则）
 
 ## 脚本用法
@@ -38,5 +38,5 @@ python book_pipeline.py --md "IV.md" --slug damodaran --mode chapters --select 1
 | 私募尽调手册 | locate | pe-dd-handbook |
 
 ## 注意
-- 版权：书全文不入 repo（03.Skills/ 只镜像 SKILL.md 摘要级 4 文件）
+- 版权：书全文不入 repo（skills/ 只镜像 SKILL.md 摘要级 4 文件）
 - 精读产出（概念页/深度卡）走 RWP 回写，不入 skill 目录

@@ -49,7 +49,7 @@
 ├── CLAUDE.md                           【层1】投资哲学+铁律（项目级常驻，<200行）
 ├── 01.Book/                            原书 PDF/EPUB（版权，不入 repo）
 ├── 02.MD/                              已转文本 9 本（版权，不入 repo）
-├── 03.Skills/                          【层2】book-to-skill 产物（入 repo）
+├── skills/                          【层2】book-to-skill 产物（入 repo）
 ├── 04.Projects/                        【层4】项目池（卡片+材料，脱敏后入 repo）
 ├── 05.Pipeline/                        流水线状态机 + 精读进度
 └── docs/superpowers/                   设计文档 + PLAN.md（入 repo）

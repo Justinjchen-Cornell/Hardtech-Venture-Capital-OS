@@ -31,8 +31,8 @@ cp agents/*.md ~/.claude/agents/
 
 ### 第 3 步：加载技能（2 分钟）
 ```bash
-# 本地已转好的 skill（若无，从 03.Skills/ 复制方法论镜像）
-cp -r 03.Skills/*/ ~/.claude/skills/ 2>/dev/null || echo "跳过（本地无 skill 时需先转书）"
+# 本地已转好的 skill（若无，从 skills/ 复制方法论镜像）
+cp -r skills/*/ ~/.claude/skills/ 2>/dev/null || echo "跳过（本地无 skill 时需先转书）"
 ```
 
 ### 第 4 步：进入项目目录（自动加载决策纪律）

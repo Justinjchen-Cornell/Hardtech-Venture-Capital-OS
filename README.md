@@ -143,8 +143,8 @@ cp agents/*.md ~/.claude/agents/
 ```
 CLAUDE.md · index.html (screening dashboard) · README.md
 docs/rules/    framework arbitration · pipeline protocol v1.2 · RWP · scenario matrix
-03.Skills/     11 skill mirrors (methodology only)
-06.Concepts/   42 linked concept pages
+skills/     11 skill mirrors (methodology only)
+concepts/   42 linked concept pages
 agents/        5 subagents
 scripts/       deal sourcing + book-to-skill pipeline
 templates/     project card + 8 pipeline output templates

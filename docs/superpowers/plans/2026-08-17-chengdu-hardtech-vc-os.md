@@ -27,7 +27,7 @@
 - Create: `.gitignore`
 - Create: `LICENSE`
 - Create: `README.md`
-- Create: 空目录 `03.Skills/` `04.Projects/` `05.Pipeline/`（README 说明用途）
+- Create: 空目录 `skills/` `04.Projects/` `05.Pipeline/`（README 说明用途）
 
 **Interfaces:**
 - Produces: repo 根骨架；后续所有任务的文件均落在此结构下
@@ -90,7 +90,7 @@
 
 **Files:**
 - Create: `~/.claude/skills/poor-charlie-almanack/SKILL.md` + `chapters/` + `glossary.md` + `patterns.md` + `cheatsheet.md`
-- Create: `03.Skills/poor-charlie-almanack/`（repo 同步镜像，仅 SKILL.md 摘要级）
+- Create: `skills/poor-charlie-almanack/`（repo 同步镜像，仅 SKILL.md 摘要级）
 - Modify: `05.Pipeline/reading-进度.md`
 
 - [ ] **Step 1: 执行提炼**（基于 Task 4 结构化 MD + 精读产出，用 book-to-skill 或手工提炼）
@@ -100,7 +100,7 @@
 
 ### Task 7-10: 逐本循环——守正 → 硬科技浪潮 → 其余书（每本一个循环）
 
-**Files（每本）:** `02.MD/structured/<书>-structured.md`、`~/.claude/skills/<slug>/`、`03.Skills/<slug>/`
+**Files（每本）:** `02.MD/structured/<书>-structured.md`、`~/.claude/skills/<slug>/`、`skills/<slug>/`
 
 **Interfaces:**
 - Consumes: `02.MD/` 各书原始 MD
