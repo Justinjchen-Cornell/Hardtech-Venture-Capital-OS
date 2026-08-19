@@ -101,4 +101,5 @@
 
 - 精读/沉淀进度：05.Pipeline/reading-进度.md；VC 概念页归集在 concepts/（脑归档规则：[[双链]]+引用格式；本地资产不入 repo）
 - 版权：01.Book/ 02.MD/ 不入 repo；repo 只含方法论（docs/templates/skills 镜像）
+- 双目录惯例：本地编号目录（03.Skills/ 06.Concepts/）为 vault 工作副本（gitignore）；发布镜像在 skills/ concepts/（git 跟踪）——改完本地跑 `python scripts/sync-local-folders.py` 同步
 - 模型路由：深度分析 pro、扫描 flash（沿用 vault 全局配置，禁 opus/sonnet）
