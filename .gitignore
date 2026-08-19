@@ -20,6 +20,4 @@ handoff-*.md
 # 项目示例（本地保留，不上传）
 examples/
 
-# 本地编号工作副本（vault 命名惯例；发布镜像在 skills/ concepts/）
-03.Skills/
-06.Concepts/
+# （2026-08-19 已取消双目录镜像：skills/ concepts/ 为唯一副本，直接编辑）

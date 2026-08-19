@@ -61,7 +61,7 @@
 - 技能创建/书转换指南：docs/技能创建指南.md（原 skill-creator 技能，已移出触发索引）
 - 回报测算并入 valuation-analyst 步骤 13；数据源映射：docs/数据源连接器映射.md
 - agents（~/.claude/agents/）9 个：sector-scanner / tech-dd / valuation-analyst / tech-transfer-advisor / deal-negotiator / meeting-prep / deal-sourcing / ic-memo-auditor / ic-memo-writer
-- 编辑纪律：本地 03.Skills/ → `python scripts/sync-local-folders.py` → 发布 skills/；内容更新走 RWP
+- 编辑纪律：skills/ concepts/ 为唯一副本（已取消双目录镜像，2026-08-19）——直接编辑，git 跟踪；内容更新走 RWP
 
 ## 成果转化评估框架（细节全文：tech-transfer skill）
 
@@ -86,7 +86,7 @@
 
 ## 工作规则
 
-- 精读/沉淀进度：05.Pipeline/reading-进度.md；VC 概念页归集在 concepts/（脑归档规则：[[双链]]+引用格式；本地资产不入 repo）
-- 版权：01.Book/ 02.MD/ 不入 repo；repo 只含方法论（docs/templates/skills 镜像）
-- 双目录惯例：本地编号目录（03.Skills/ 06.Concepts/）为 vault 工作副本（gitignore）；发布镜像在 skills/ concepts/（git 跟踪）——改完本地跑 `python scripts/sync-local-folders.py` 同步
+- 精读/沉淀进度：05.Pipeline/reading-进度.md；VC 概念页归集在 concepts/（脑归档规则：[[双链]]+引用格式）
+- 版权：01.Book/ 02.MD/ 不入 repo；repo 只含方法论（docs/templates/skills/concepts/agents）
+- 目录单一化（2026-08-19）：skills/ concepts/ 为唯一副本直接编辑（取消 03.Skills/ 06.Concepts/ 双目录镜像与 sync 脚本）；本地数据（04.Projects/ 05.Pipeline/）gitignore
 - 模型路由：深度分析 pro、扫描 flash（沿用 vault 全局配置，禁 opus/sonnet）
