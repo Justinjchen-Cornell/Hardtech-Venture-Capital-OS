@@ -149,7 +149,9 @@ docs/          design docs · constitution · book map
 
 ## 📄 License
 
-MIT © Justinjchen-Cornell
+**Apache License 2.0** — commercial use, modification, and redistribution are permitted, provided that the copyright notice and NOTICE file are retained.
+
+© Justinjchen-Cornell · See [LICENSE](LICENSE) and [NOTICE](NOTICE).
 
 ---
 

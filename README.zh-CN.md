@@ -86,7 +86,9 @@ cp agents/*.md ~/.claude/agents/   # 安装 5 个子代理
 
 ## 📄 License
 
-MIT © Justinjchen-Cornell
+本项目采用 **Apache 2.0 许可证**——商业使用、修改、分发均被允许，但需保留版权声明与 NOTICE 文件。
+
+© Justinjchen-Cornell · 详见 [LICENSE](LICENSE) 与 [NOTICE](NOTICE)。
 
 ---
 
