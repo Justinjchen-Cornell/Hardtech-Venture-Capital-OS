@@ -58,7 +58,7 @@
 ## 技能与子代理索引（随体系扩展更新）
 
 - skills：poor-charlie-almanack（精读产物，生成中）；后续：shou-zheng / hardtech-wave / 其余 8 本（逐本提炼）
-- agents（~/.claude/agents/）：sector-scanner(flash) / tech-dd(pro) / valuation-analyst(pro)；后置 deal-negotiator / ic-memo-writer
+- agents（~/.claude/agents/）8 个：sector-scanner(flash) / tech-dd(pro) / valuation-analyst(pro) / tech-transfer-advisor(pro) / deal-negotiator(flash) / meeting-prep(flash) / deal-sourcing(flash) / ic-memo-auditor(pro)
 - 书转换纪律：一本一本（预处理→提炼方案确认→转换→3 问验证→沉淀），用户可中途调整
 
 
