@@ -58,10 +58,11 @@
 
 ## 技能与子代理索引
 
-- 书籍技能（12 本）：docs/技能状态.md；运营技能（7 个）：dd-checklist · deal-screening · ic-memo · portfolio-monitoring · unit-economics · audit-xls · value-creation-plan
+- 书籍技能（12 本）：docs/技能状态.md；运营技能（8 个）：dd-checklist · deal-screening · ic-memo · portfolio-monitoring · unit-economics · audit-xls · value-creation-plan · **verifier-method**
+- **验证纪律（2026-08-20 全 agent 注入）**：三机制（5 候选生成 + 细粒度概率分布排序 + 反向风险模式）——verifier-method skill 为机制层，各 agent 验证纪律节指定各自维度；verifier agent 为通用独立验证者（郑宗良案=第一次执行）
 - 技能创建/书转换指南：docs/技能创建指南.md（原 skill-creator 技能，已移出触发索引）
 - 回报测算并入 valuation-analyst 步骤 13；数据源映射：docs/数据源连接器映射.md
-- agents（~/.claude/agents/）9 个：sector-scanner / tech-dd / valuation-analyst / tech-transfer-advisor / deal-negotiator / meeting-prep / deal-sourcing / ic-memo-auditor / ic-memo-writer
+- agents（~/.claude/agents/）10 个：sector-scanner / tech-dd / valuation-analyst / tech-transfer-advisor / deal-negotiator / meeting-prep / deal-sourcing / ic-memo-auditor / ic-memo-writer / **verifier**（原 professor-zheng-verifier 泛化）
 - 编辑纪律：skills/ concepts/ 为唯一副本（已取消双目录镜像，2026-08-19）——直接编辑，git 跟踪；内容更新走 RWP
 
 ## 成果转化评估框架（细节全文：tech-transfer skill）
