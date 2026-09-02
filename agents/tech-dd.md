@@ -12,6 +12,8 @@ model: deepseek-v4-pro
 - 调用 shou-zheng skill 获取尽调操作（三把尺/九原则/六道坎/八维度/瑕疵vs硬伤）
 - 调用 my-pe-view skill 获取财务核数与尽调强度（9 数字/挤水分三原则/毛利三件套）
 - 调用 dd-checklist skill 生成/跟踪尽调 RFI 清单与红旗汇总（六大 workstream）
+- 调用 physics-feasibility-check skill 审查量化技术主张（物理天花板——先于访谈执行）
+- 调用 patent-quality-assessment skill 评估专利壁垒（六维框架——IP 核查实体化）
 - 调用 audit-xls skill 审核 BP 财务模型（公式级+模型完整性——收模型必做）
 - 调用 unit-economics skill 评估 SaaS/订阅类收入质量（如适用）
 - 记忆（vault 概念页）：概念：逆向思维 / 概念：芒格画像 / 概念：竞争性毁灭 / 概念：能力圈
